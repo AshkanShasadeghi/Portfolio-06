@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@400..700&family=Creepster&family=Fugaz+One&family=Lilita+One&family=Lobster&family=Oleo+Script:wght@400;700&family=Permanent+Marker&family=Racing+Sans+One&family=Rubik+Bubbles&family=Rubik+Gemstones&family=Shrikhand&family=Silkscreen:wght@400;700&display=swap');
+
+
+.caveat {
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+}
+
+.lobster-regular {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lilita-one-regular {
+    font-family: "Lilita One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oleo-script-regular {
+    font-family: "Oleo Script", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oleo-script-bold {
+    font-family: "Oleo Script", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.silkscreen-regular {
+    font-family: "Silkscreen", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.silkscreen-bold {
+    font-family: "Silkscreen", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.creepster-regular {
+    font-family: "Creepster", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-bubbles-regular {
+    font-family: "Rubik Bubbles", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bangers-regular {
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fugaz-one-regular {
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-gemstones-regular {
+    font-family: "Rubik Gemstones", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.shrikhand-regular {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.racing-sans-one-regular {
+    font-family: "Racing Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
