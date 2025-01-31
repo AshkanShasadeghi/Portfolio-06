@@ -1,17 +1,16 @@
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function () {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
+let GetData = {
+  AboutUs: {
+    Name: "Ashkan",
+    Family: "Shasadeghi",
+    Age: Date().slice(11, 15),
+    Description: `
+    Hello my name is Ashkan.
+    i live in the Semnan City that is in the norv of Iran
+    i can maker web project by html, css and java script.
+    and i know making projects by framewoks xample of React jS and Next JS.
+    
+    `,
+  },
 };
-requestAnimationFrame(update);
+
+console.log(GetData.AboutUs.Age);

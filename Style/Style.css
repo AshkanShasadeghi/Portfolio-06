@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Popping", sans-serif;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 * body {
   width: 100vw;
@@ -33,7 +36,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   gap: 0.2rem;
   padding: 0.5rem;
   z-index: 10;
@@ -56,7 +58,7 @@
   text-transform: uppercase;
   font-weight: 900;
   border-bottom: 1px white solid;
-  transition: letter-spacing 300ms ease-in-out;
+  transition: letter-spacing 100ms ease-in-out;
   font-size: 1em;
   text-align: center;
 }
@@ -67,10 +69,12 @@
   letter-spacing: 0.5rem;
 }
 * body main container article {
+  max-width: 35cm;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 * body main container article p {
   width: 100%;
@@ -85,12 +89,49 @@
   font-size: 2em;
 }
 * body main container footer {
+  width: 100%;
+}
+* body main container footer nav {
+  max-width: 25cm;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+* body main container footer nav button,
+* body main container footer nav a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  text-decoration: none;
 }
-* body main container footer p {
-  cursor: pointer;
+* body main container footer nav button span,
+* body main container footer nav a span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  filter: invert(1);
+  transition: all 100ms ease-in-out;
+}
+* body main container footer nav button span img,
+* body main container footer nav a span img {
+  width: 2rem;
+}
+* body main container footer nav button strong,
+* body main container footer nav a strong {
+  display: none;
+}
+* body main container footer nav button:hover span,
+* body main container footer nav a:hover span {
+  transform: translateY(-100%);
+}
+* body main container footer nav button:visited,
+* body main container footer nav a:visited {
+  color: white;
 }/*# sourceMappingURL=Style.css.map */
