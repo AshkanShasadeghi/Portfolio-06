@@ -20,14 +20,38 @@ let GetData = {
     IR: "IR 7101 900 0000 021 6080 39 3006",
     Account: "021 6080 39 3006"
   },
-  Address: {
-    Telegram: "https://t.me/Ashkan_Shasadeghi",
-    Email: "AshkanSadeghi023.as@gmail.com",
-    Instagram: "https://instagram.com/Ashkan.Shasadeghi",
-    WhatsApp: "https://wa.me/989036515293",
-    LinkeDin: "https://www.linkedin.com/in/ashkan-shasadeghi-349996247/",
-    Github: "https://github.com/AshkanShasadeghi"
-  }
+  SocialNetworks: [
+    {
+      Name: "Telegram",
+      Address: "https://t.me/Ashkan_Shasadeghi",
+      Icon: ""
+    },
+    {
+      Name: "Email",
+      Address: "AshkanSadeghi023.as@gmail.com",
+      Icon: ""
+    },
+    {
+      Name: "Instagram",
+      Address: "https://instagram.com/Ashkan.Shasadeghi",
+      Icon: ""
+    },
+    {
+      Name: "WhatsApp",
+      Address: "https://wa.me/989036515293",
+      Icon: ""
+    },
+    {
+      Name: "LinkeDin",
+      Address: "https://www.linkedin.com/in/ashkan-shasadeghi-349996247/",
+      Icon: ""
+    },
+    {
+      Name: "Github",
+      Address: "https://github.com/AshkanShasadeghi",
+      Icon: ""
+    },
+  ]
 };
 
 function ShowModal(Action) {
@@ -41,7 +65,7 @@ function Information() {
   let ABOUT = document.createElement("button");
   let GITHUB = document.createElement("a");
 
-  GITHUB.setAttribute('href', GetData.Address.Github)
+  GITHUB.setAttribute('href', GetData.SocialNetworks.filter(r => r.Name === "Github")[0].Address)
   GITHUB.target = "_blank"
   ABOUT.addEventListener("click", () => {
     ShowModal(true);
@@ -76,7 +100,7 @@ function Article() {
   GetData.Job.map((r, index) => {
     Output += r;
     if (index + 1 !== GetData.Job.length) {
-      Output += ","
+      Output += ", "
     }
   });
 
@@ -88,3 +112,14 @@ function Article() {
 }
 
 Article();
+
+function SocialNetworks() {
+  let Navigation = document.querySelector("footer nav");
+
+  let BUTTON = document.createElement("button");
+  let ICON = document.createElement("img");
+  let SPAN = document.createElement("span");
+
+}
+
+SocialNetworks();
