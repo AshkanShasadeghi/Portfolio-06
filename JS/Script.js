@@ -3,7 +3,7 @@ let GetData = {
   Family: "Shasadeghi",
   Age: Date().slice(11, 15),
   Section: "Engineer",
-  Job: ["Web Developer", "Dsigner", "Trader"],
+  Job: ["Web Developer", "Dsigner"],
   Description: `
     Hello my name is Ashkan.
     i live in the Semnan City that is in the norv of Iran
@@ -12,51 +12,56 @@ let GetData = {
     `,
   Call: {
     Print: "+98 (903) 651 - 5293",
-    Number: "+989036515293"
+    Number: "+989036515293",
   },
   VC: "./file/Resume/Ashkan Shasadeghi.pdf",
   Cart: {
     Number: "6037 6975 6595 3541",
     IR: "IR 7101 900 0000 021 6080 39 3006",
-    Account: "021 6080 39 3006"
+    Account: "021 6080 39 3006",
   },
   SocialNetworks: [
     {
+      ParentElement: "Link",
       Name: "Telegram",
       Address: "https://t.me/Ashkan_Shasadeghi",
-      Icon: ""
+      Icon: "./Image/Icon/SVG/send.svg",
     },
     {
+      ParentElement: "Button",
       Name: "Email",
       Address: "AshkanSadeghi023.as@gmail.com",
-      Icon: ""
+      Icon: "./Image/Icon/SVG/send.svg",
     },
     {
+      ParentElement: "Link",
       Name: "Instagram",
       Address: "https://instagram.com/Ashkan.Shasadeghi",
-      Icon: ""
+      Icon: "./Image/Icon/SVG/send.svg",
     },
     {
+      ParentElement: "Link",
       Name: "WhatsApp",
       Address: "https://wa.me/989036515293",
-      Icon: ""
+      Icon: "./Image/Icon/SVG/send.svg",
     },
     {
+      ParentElement: "Link",
       Name: "LinkeDin",
       Address: "https://www.linkedin.com/in/ashkan-shasadeghi-349996247/",
-      Icon: ""
+      Icon: "./Image/Icon/SVG/send.svg",
     },
     {
+      ParentElement: "a",
       Name: "Github",
       Address: "https://github.com/AshkanShasadeghi",
-      Icon: ""
+      Icon: "./Image/Icon/SVG/send.svg",
     },
-  ]
+  ],
 };
 
 function ShowModal(Action) {
   console.log("Hello");
-
 }
 
 function Information() {
@@ -65,8 +70,11 @@ function Information() {
   let ABOUT = document.createElement("button");
   let GITHUB = document.createElement("a");
 
-  GITHUB.setAttribute('href', GetData.SocialNetworks.filter(r => r.Name === "Github")[0].Address)
-  GITHUB.target = "_blank"
+  GITHUB.setAttribute(
+    "href",
+    GetData.SocialNetworks.filter((r) => r.Name === "Github")[0].Address
+  );
+  GITHUB.target = "_blank";
   ABOUT.addEventListener("click", () => {
     ShowModal(true);
   });
@@ -74,7 +82,7 @@ function Information() {
   GITHUB.innerHTML = "github";
   ABOUT.innerHTML = "About Us";
 
-  [ABOUT, GITHUB].map(r => {
+  [ABOUT, GITHUB].map((r) => {
     Navigation.appendChild(r);
   });
 }
@@ -100,15 +108,15 @@ function Article() {
   GetData.Job.map((r, index) => {
     Output += r;
     if (index + 1 !== GetData.Job.length) {
-      Output += ", "
+      Output += ", ";
     }
   });
 
   JOB.innerHTML = Output;
 
-  [SECTION, FULLNAME, JOB].map(r => {
-    Article.appendChild(r)
-  })
+  [SECTION, FULLNAME, JOB].map((r) => {
+    Article.appendChild(r);
+  });
 }
 
 Article();
@@ -116,10 +124,30 @@ Article();
 function SocialNetworks() {
   let Navigation = document.querySelector("footer nav");
 
+  let Filter = GetData.SocialNetworks.filter((r) => r.Name !== "Github");
+
   let BUTTON = document.createElement("button");
+  let LINK = document.createElement("a");
+
   let ICON = document.createElement("img");
   let SPAN = document.createElement("span");
+  let LABEL = document.createElement("label");
 
+  Filter.map((r) => {
+    if (r.ParentElement === "Button") {
+      BUTTON.addEventListener("onclick", r.Address);
+      LABEL.innerHTML(r.Name);
+      ICON.setAttribute("src", r.Icon);
+      SPAN.appendChild(ICON);
+
+      BUTTON.appendChild(SPAN);
+      BUTTON.appendChild(LABEL);
+
+      Navigation.appendChild(BUTTON);
+      Navigation.appendChild(LABEL);
+    } else if (r.ParentElement === "Link") {
+    }
+  });
 }
 
 SocialNetworks();
